@@ -4,8 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3431:4000"  # API
-      - "3432:6001"  # WebSocket
+      - '3431:4000' # API
+      - '3432:6001' # WebSocket
     environment:
-      DATABASE_URL: ${DATABASE_URL}
+      DATABASE_URL: ${MONGO_URI}
     network_mode: bridge
