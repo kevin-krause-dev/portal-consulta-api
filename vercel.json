@@ -1,0 +1,15 @@
+ {
+      "version": 2,
+      "builds": [
+        {
+          "src": "dist/main.js", // Ou o caminho para seu entrypoint compilado
+          "use": "@vercel/node"
+        }
+      ],
+      "routes": [
+        {
+          "src": "/(.*)",
+          "dest": "dist/main.js" // Deve corresponder ao src do build
+        }
+      ]
+    }
